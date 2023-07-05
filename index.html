@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Beshiefy 🤸 your 🤸 text 🤸 now!">
+  <meta name="author" content="pseudoman21">
   <meta property="og:image" content="beshiefy.gif">
   <title>Beshie.Co</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/x-icon" href="./favicon.png">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <nav>
-    <div class="nav-brand flex justify-center">
-      Beshiefy.Co <img src="./favicon.png" /> 
+    <div class="nav-brand md:mt-4 flex justify-center">
+      Beshiefy.Co <img src="./images/favicon.png" /> 
     </div>
   </nav>
   <section>
-    <div class="flex flex-col px-4">
+    <div class="flex flex-col px-4 -mt-40 md:-mt-0">
       <form onsubmit="beshiefyHandler(event)" class="md:flex gap-3">
         <input class="border p-3 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-blue-500 w-auto" type="text" placeholder="Beshify 🤸 your 🤸 text 🤸 here" name="inputText" id="inputText" />
         <button class="flex hover:bg-blue-400 transition mt-3 md:mt-auto w-full justify-center ease-in-out duration-700 rounded-full bg-blue-300 p-3 my-auto text-xl font-medium" type="submit">Beshiefy</button>
@@ -38,6 +39,20 @@
       <span class="text-white text-center mt-2" id="status"></span>
     </div>
   </section>
+  <footer class="w-100 bg-blue-900">
+    <div class="flex justify-center py-3">
+      <img src="./images/github-icon.svg" class="my-auto" />
+      <a class="text-white my-auto" target="_blank" rel="noferrer" href="https://github.com/Pseudoman21/beshie.co">
+        <span class="text-white my-auto" id="year"></span>
+      </a>
+    </div>
+  </footer>
   <script src="main.js"></script>
+  <script>
+    const currentYear = new Date().getFullYear();
+    
+    const yearElement = document.getElementById('year');
+    yearElement.textContent = `@pseudoman21 © ${currentYear}`;
+  </script>
 </body>
 </html>
