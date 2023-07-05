@@ -14,6 +14,10 @@ body {
   font-weight: bold;
 }
 
+main {
+  height: inherit;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -25,13 +29,19 @@ input {
   min-width: 16em !important;
 }
 
+.beshie-co {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 20vw;
+  height: auto;
+}
+
 #resultArea {
   display: none;
   background-color: #1E293B;
   color: white;
   padding: 20px;
   margin-top: 20px;
-  width: ;
   border-radius: 20px;
 }
 
@@ -52,4 +62,11 @@ img {
   width: 30px;
   height: 30px;
   margin: auto 3px;
+}
+
+@media screen and (max-width: 769px) {
+  .beshie-co {
+    margin-bottom: 180px;
+    width: 60vw;
+  }
 }
